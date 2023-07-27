@@ -1,0 +1,56 @@
+nvm use 18.12.0
+
+cd /var/www/
+
+git clone https://github.com/davids1989/WhatsappAPI.git
+
+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
+
+npm init -y
+npm install venom-bot express
+npm install npm-check-updates
+
+
+
+npm init
+npm i typescript --save-dev
+npm install nodemon rimraf ts-node @types/node --save-dev
+npm i venom-bot / npm i --save venom-bot 
+npm i dotenv express --save
+npm i @types/dotenv @types/express --save-dev
+npm i libphonenumber-js --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================
+Comandos e codigo de teste
+
+npm run dev
+
+Para erros: npm install npm-check-updates
+
+
+this.sendText("5531989313830@c.us", "Olá tudo bem? Este é um teste")
+
+
+
+const { number, message } = req.body
+
+
+OUTROS Comandos
+
+Descobrir quem esta usando determinada porta: 
+sudo fuser -n tcp 5002
+
+Para excluir o serviço que esta usando determminada porta:
+kill PID_do_processo
