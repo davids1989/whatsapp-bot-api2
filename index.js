@@ -16,7 +16,7 @@ venom
       // Opção para exibir o QRCode em algum lugar, como enviar por email, salvar em arquivo, etc.
       console.log('Base64 QR code image:\n', base64Qr);
       qrCodeUrl = urlCode.replace('qrcode', 'qrsession');
-      console.log('URL do QR Code:', qrCodeUrl);
+      //console.log('URL do QR Code:', qrCodeUrl);
     },
     undefined,
     { logQR: false, createPathFileToken: true }
