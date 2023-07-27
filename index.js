@@ -6,15 +6,17 @@ const port = 3000;
 
 app.use(express.json());
 
+let qrCodeUrl = '';
+
 venom
   .create(
     'sessionName',
     (base64Qr, asciiQR, attempts, urlCode) => {
       console.log('Terminal QR code:\n', asciiQR);
-      console.log('URL code:', urlCode);
-      console.log('URL da imagem do QR Code:', urlCode.replace('qrcode', 'qrsession'));
       // Opção para exibir o QRCode em algum lugar, como enviar por email, salvar em arquivo, etc.
-      // console.log('Base64 QR code image:\n', base64Qr);
+      console.log('Base64 QR code image:\n', base64Qr);
+      qrCodeUrl = urlCode.replace('qrcode', 'qrsession');
+      console.log('URL do QR Code:', qrCodeUrl);
     },
     undefined,
     { logQR: false, createPathFileToken: true }
