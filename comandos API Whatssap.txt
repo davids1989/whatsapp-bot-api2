@@ -4,6 +4,7 @@ cd /var/www/
 
 git clone https://github.com/davids1989/WhatsappAPI.git
 
+Chave:
 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
 
 npm init -y
