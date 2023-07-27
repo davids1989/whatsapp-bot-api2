@@ -23,6 +23,30 @@ npm i libphonenumber-js --save
 
 
 
+Para criar o serviço em segundo plano
+
+sudo nano /etc/systemd/system/myapp.service
+
+[Unit]
+Description=My Node.js App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /caminho/para/o/seu/arquivo/index.js
+Restart=always
+User=nome_do_usuário
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/caminho/para/o/seu/arquivo
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+sudo systemctl start myapp
+sudo systemctl status myapp
+sudo systemctl stop myapp
 
 
 
