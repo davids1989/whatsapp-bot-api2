@@ -9,13 +9,15 @@ app.use(express.json());
 venom
   .create(
     'sessionName',
-    (base64Qr, asciiQR) => {
+    (base64Qr, asciiQR, attempts, urlCode) => {
       console.log('Terminal QR code:\n', asciiQR);
+      console.log('URL code:', urlCode);
+      console.log('URL da imagem do QR Code:', urlCode.replace('qrcode', 'qrsession'));
       // Opção para exibir o QRCode em algum lugar, como enviar por email, salvar em arquivo, etc.
       // console.log('Base64 QR code image:\n', base64Qr);
     },
     undefined,
-    { logQR: false }
+    { logQR: false, createPathFileToken: true }
   )
   .then((client) => {
     console.log('WhatsApp Bot conectado com sucesso');

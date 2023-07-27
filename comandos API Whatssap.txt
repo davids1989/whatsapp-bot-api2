@@ -2,7 +2,7 @@ nvm use 18.12.0
 
 cd /var/www/
 
-git clone https://github.com/davids1989/WhatsappAPI.git
+git clone https://github.com/davids1989/whatsapp-bot-api2.git
 
 Chave:
 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
