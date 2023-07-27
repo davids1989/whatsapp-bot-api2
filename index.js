@@ -14,8 +14,8 @@ venom
     (base64Qr, asciiQR, attempts, urlCode) => {
       console.log('Terminal QR code:\n', asciiQR);
       // Opção para exibir o QRCode em algum lugar, como enviar por email, salvar em arquivo, etc.
-      console.log('Base64 QR code image:\n', base64Qr);
-      qrCodeUrl = urlCode.replace('qrcode', 'qrsession');
+      //console.log('Base64 QR code image:\n', base64Qr);
+      //qrCodeUrl = urlCode.replace('qrcode', 'qrsession');
       //console.log('URL do QR Code:', qrCodeUrl);
     },
     undefined,
