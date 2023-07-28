@@ -1,2 +1,5 @@
-2023/07/27-17:09:17.075 115c Creating DB E:\Desktop\github\whatsapp-bot-api\tokens\sessionName\Default\Local Storage\leveldb since it was missing.
-2023/07/27-17:09:17.522 115c Reusing MANIFEST E:\Desktop\github\whatsapp-bot-api\tokens\sessionName\Default\Local Storage\leveldb/MANIFEST-000001
+2023/07/28-13:45:24.287 1fbc Reusing MANIFEST E:\Desktop\github\whatsapp-bot-api\tokens\sessionName\Default\Local Storage\leveldb/MANIFEST-000001
+2023/07/28-13:45:24.289 1fbc Recovering log #3
+2023/07/28-13:45:24.290 1fbc Level-0 table #3: started
+2023/07/28-13:45:24.358 1fbc Level-0 table #3: 24708 bytes OK
+2023/07/28-13:45:24.476 1fbc Delete type=0 #3

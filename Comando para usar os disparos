@@ -1,0 +1,6 @@
+Para conectar ao banco de dados PostgreSQL
+npm install pg
+
+*Para realizar as solicitações POST*
+npm install axios
+
