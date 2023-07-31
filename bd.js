@@ -100,7 +100,7 @@ if (currentHour >= 19 || (currentHour === 8 && currentMinute >= 1) || currentHou
       // Corpo da mensagem a ser enviado via POST
       const messageData = {
         number: cleanedPhoneNumber,
-        message: `Olá ${nome}! 🎉\n\nSeja bem-vindo(a) à família Tríade Fibra! Estamos empolgados por tê-lo(a) como nosso novo cliente. 😊\n\nAssim que o técnico iniciar a instalação, gostaríamos que você conferisse nosso guia de instalação clicando no link abaixo: 👇\n\nhttps://triadefibra.com/qualidade/\n\nUtilize o código de segurança: "${Contrato}"\n\nQueremos garantir que tudo ocorra perfeitamente para que você tenha uma conexão incrível em casa🏡💻\nAproveitando ao máximo nossa internet de qualidade. 🚀🌐\n\nAgradecemos por escolher a Tríade Fibra. Estamos sempre aqui para ajudar e proporcionar a melhor experiência em internet para você! ❤🤝\n\nAtenciosamente,\nEquipe Tríade Fibra`,
+        message: `Olá ${nome}! 🎉\n\nSeja bem-vindo(a) à família Tríade Fibra! Estamos empolgados por tê-lo(a) como nosso novo cliente. 😊\n\nPreparamos um passo a passo para você acompanhar a instalação do técnico. Isso *EVITARÁ TRANSTORNOS* na qualidade de sua conexão referente a instalação.🧐 \n\nAssim que o técnico iniciar a instalação, clique no link abaixo ou copie e cole em seu navegador do celular.👇\n\nhttps://triadefibra.com/qualidade/\n\nUtilize o código de segurança quando for solicitado: *${Contrato}* \ne não compartilhe este código! Qualquer dúvida entre em contato com nosso Suporte. 31985554661\n\nAgradecemos por escolher a Tríade Fibra. ❤🤝\n\nAtenciosamente,\nEquipe Tríade Fibra`,
       };
 
       try {
