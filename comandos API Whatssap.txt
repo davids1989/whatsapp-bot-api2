@@ -5,7 +5,7 @@ cd /var/www/
 git clone https://github.com/davids1989/whatsapp-bot-api2.git
 
 Chave:
-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
+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
 
 cd whatsapp-bot-api2
 
@@ -13,6 +13,8 @@ npm init -y
 npm install venom-bot express
 npm install npm-check-updates
 npm install libphonenumber-js
+npm install nodemailer
+
 
 
 
