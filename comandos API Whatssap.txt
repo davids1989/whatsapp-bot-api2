@@ -16,15 +16,30 @@ npm install libphonenumber-js
 npm install nodemailer
 
 
+Para receber e-mail de parada do app
 
+=====================================
 
-npm init
-npm i typescript --save-dev
-npm install nodemon rimraf ts-node @types/node --save-dev
-npm i venom-bot / npm i --save venom-bot 
-npm i dotenv express --save
-npm i @types/dotenv @types/express --save-dev
-npm i libphonenumber-js --save
+Adicionar o intervalo de tempo para conferir se o app esta rodando:
+
+crontab -e
+
+*/10 * * * * /var/www/whatsapp-bot-api2/monitor_whatsappbot.sh
+
+COMANDO PARA CONFERIR O PIN:
+ps -ef
+
+COMANDO PARA EDITAR O SCRIPT E INSERIR O NUMERO DO PIN
+nano monitor_whatsappbot.sh
+
+COMANDO PARA LIBERAR EXECUÇÃO:
+chmod +x monitor_whatsappbot.sh
+
+COMANDO PARA RODAR O SCRIPT DE DISPARO DE E-MAIL
+./monitor_whatsappbot.sh
+
+COMANDO PARA REMOVER APÓS SER INFORMADO POR E-MAIL
+rm -r informado.txt
 
 
 
