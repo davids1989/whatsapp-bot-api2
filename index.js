@@ -1,8 +1,9 @@
 const venom = require('venom-bot');
 const express = require('express');
-
 const app = express();
-const port = 3000;
+const port = 3009;
+
+
 
 app.use(express.json());
 
@@ -37,6 +38,35 @@ venom
           res.status(500).json({ success: false, message: 'Erro ao enviar mensagem', error });
         });
     });
+
+    app.post('/send-image', async (req, res) => {
+        const { number, imagePath, imageName, caption } = req.body;
+        await client
+          .sendImage(`${number}@c.us`, imagePath, imageName, caption)
+          .then(() =>{
+            res.status(200).json({ success: true, message: 'Imagem enviada com sucesso' });
+          })        
+        .catch ((error) => {
+        res.status(500).json({ success: false, message: 'Erro ao enviar imagem', error });
+      });
+    });
+
+   
+    //app.post('/send-message', (req, res) => {
+      //const { number, message } = req.body;
+      // Simule um atraso de 2 minutos (120000 milissegundos) antes de responder
+      //setTimeout(() => {
+        //client
+          //.sendText(`${number}@c.us`, message)
+          //.then(() => {
+            //res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso' });
+          //})
+          //.catch((error) => {
+            //res.status(500).json({ success: false, message: 'Erro ao enviar mensagem', error });
+          //});
+      //}, 120000); // 2 minutos de atraso
+    //});
+    
 
     app.listen(port, () => {
       console.log(`API está rodando em http://localhost:${port}`);

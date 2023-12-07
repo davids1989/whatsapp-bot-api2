@@ -1,3 +1,5 @@
+909246 - API do Whatsapp - Parado
+
 nvm use 18.12.0
 
 cd /var/www/
@@ -5,7 +7,7 @@ cd /var/www/
 git clone https://github.com/davids1989/whatsapp-bot-api2.git
 
 Chave:
-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
+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
 
 cd whatsapp-bot-api2
 
