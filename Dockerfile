@@ -6,7 +6,7 @@ RUN mkdir -p /app/whatsapp-bot-api2/node_modules && chown -R node:node /app/what
 WORKDIR /app/whatsapp-bot-api2
 
 # Instalar as dependências
-RUN npm init -y venom-bot express npm-check-updates libphonenumber-js nodemailer
+RUN npm install venom-bot express npm-check-updates libphonenumber-js nodemailer
 
 COPY package*.json ./
 
