@@ -1,0 +1,22 @@
+# docker-compose.yml
+version: '3'
+services:
+  whatsapp:
+    build: .
+    command: "npm run start"
+    working_dir: /app/whatsapp-bot-api2
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "3010"
+    ports:
+      - "3010:3010"
+    networks:
+      rede-triade:
+    restart: always
+    
+
+networks:
+  rede-triade:
+    external: true
+    name: rede-triade

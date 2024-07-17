@@ -1,7 +1,6 @@
 node_modules
 tokens
 package-lock.json
-package.json
 testeAPIWhats.js
 dash.html
 client.js
