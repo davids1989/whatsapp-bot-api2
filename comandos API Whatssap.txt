@@ -6,6 +6,8 @@ cd /var/www/
 
 git clone https://github.com/davids1989/whatsapp-bot-api2.git
 
+git pull https://github.com/davids1989/whatsapp-bot-api2.git
+
 Chave:
 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
 
