@@ -31,15 +31,40 @@ venom
 
     app.post('/send-message', (req, res) => {
       const { number, message } = req.body;
+  
+      // Função para normalizar o número
+      const normalizeNumber = (num) => {
+        // Remove todos os caracteres não numéricos
+        num = num.replace(/\D/g, '');
+    
+        // Verifica se o número começa com o código do país
+        if (num.startsWith('55')) {
+            // Remove o código do país
+            num = num.slice(2);
+        }
+    
+        // Verifica se o número tem 11 dígitos
+        if (num.length === 11) {
+          // Remove o 3° dígito (índice 2, já que os índices começam em 0)
+            num = num.slice(0, 2) + num.slice(3); // Mantém os dois primeiros dígitos e remove o terceiro
+        }
+    
+        // Retorna o número no formato esperado
+        return `${num}@c.us`;
+    };
+  
+      const normalizedNumber = normalizeNumber(number);
+  
       client
-        .sendText(`${number}@c.us`, message)
-        .then(() => {
-          res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso' });
-        })
-        .catch((error) => {
-          res.status(500).json({ success: false, message: 'Erro ao enviar mensagem', error });
-        });
-    });
+          .sendText(normalizedNumber, message)
+          .then(() => {
+              res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso' });
+          })
+          .catch((error) => {
+              res.status(500).json({ success: false, message: 'Erro ao enviar mensagem', error });
+          });
+  });
+  
 
     app.post('/send-image', async (req, res) => {
       const { number, imagePath, imageName, caption } = req.body;
