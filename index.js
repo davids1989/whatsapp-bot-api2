@@ -69,13 +69,18 @@ venom
     app.post('/send-image', async (req, res) => {
       const { number, imagePath, imageName, caption } = req.body;
       await client
-        .sendImage(`${number}@c.us`, imagePath, imageName, caption)
-        .then(() =>{
-          res.status(200).json({ success: true, message: 'Imagem enviada com sucesso' });
-        })
-        .catch ((error) => {
-          res.status(500).json({ success: false, message: 'Erro ao enviar imagem', error });
-        });
+      .sendImage(
+        `${number}@c.us`,
+        `${imagePath}`,
+        `${imageName}`,
+        `${caption}`
+      )
+      .then((result) => {
+        res.status(200).json({ success: true, message: 'Imagem enviada com sucesso' });
+      })
+      .catch((erro) => {
+        res.status(500).json({ success: false, message: 'Erro ao enviar imagem', error });
+      });
     });
 
     app.listen(port, () => {
