@@ -1,5 +1,8 @@
 FROM node:18.18.0
 
+ARG NPM_REGISTRY=https://registry.npmjs.org/
+RUN npm config set registry $NPM_REGISTRY
+
 # Instalar dependências necessárias para Puppeteer
 RUN apt-get update && apt-get install -y \
     libnss3 \
